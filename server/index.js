@@ -7,9 +7,6 @@ app.use(express.json())
 app.use(cors())
 
 app.use(express.static("./public"))
-app.get("/", (req, res) => {
-    res.sendFile("index.html")
-})
 
 app.get('/api/houses', ctrl.getAllHouses)
 app.post('/api/houses', ctrl.createHouse)
