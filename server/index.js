@@ -8,6 +8,11 @@ app.use(cors())
 
 app.use(express.static("./public"))
 
+// below code  checks if you are in production or development mode and assigns the according url depending on the mode
+// const production  = 'https://traceability-rollbar-test.herokuapp.com';
+// const development = 'http://localhost:4004/';
+// const url = (process.env.NODE_ENV ? production : development);
+
 app.get('/api/houses', ctrl.getAllHouses)
 app.post('/api/houses', ctrl.createHouse)
 app.put('/api/houses/:id', ctrl.updateHouse)
